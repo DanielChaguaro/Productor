@@ -1,0 +1,17 @@
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\bin\Debug\net8.0\ProductorApp.exe
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\bin\Debug\net8.0\ProductorApp.deps.json
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\bin\Debug\net8.0\ProductorApp.runtimeconfig.json
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\bin\Debug\net8.0\ProductorApp.dll
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\bin\Debug\net8.0\ProductorApp.pdb
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\Producto.C51183B4.Up2Date
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.dll
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\refint\ProductorApp.dll
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.pdb
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ProductorApp.genruntimeconfig.cache
+C:\Users\DELL\Desktop\Danieliti\DisArquiSoft\ProductorApp\obj\Debug\net8.0\ref\ProductorApp.dll
