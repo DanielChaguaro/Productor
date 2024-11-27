@@ -8,24 +8,34 @@ namespace ProductorApp
     {
         private static void Main(string[] args)
         {
-            // Configuración de conexión
+            // Configuración de conexión a RabbitMQ
             var factory = new ConnectionFactory
             {
-                HostName = "localhost", // Cambiar según la dirección de tu RabbitMQ
+                HostName = "localhost", // Cambiar si RabbitMQ está en otro servidor
                 UserName = "guest",
                 Password = "guest"
             };
 
-            Console.WriteLine("Escribe el mensaje que deseas enviar a la cola:");
-            string message = Console.ReadLine();
+            Console.WriteLine("Escribe el destinatario del correo electrónico:");
+            string recipient = Console.ReadLine();
+
+            //Console.WriteLine("Escribe el asunto del correo electrónico:");
+            //string subject = Console.ReadLine();
+
+            Console.WriteLine("Escribe el cuerpo del correo electrónico:");
+            string bodyContent = Console.ReadLine();
+
+            // Crear un mensaje que represente al correo electrónico
+            //Asunto: {subject}\n
+            var emailMessage = $"Destinatario: {recipient}\nCuerpo: {bodyContent}";
 
             // Crear conexión y canal
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
 
-            const string queueName = "mi-cola";
+            const string queueName = "email-queue";
 
-            // Declarar la cola
+            // Declarar la cola (si no existe, se crea automáticamente)
             channel.QueueDeclare(
                 queue: queueName,
                 durable: false,
@@ -34,16 +44,17 @@ namespace ProductorApp
                 arguments: null);
 
             // Convertir el mensaje a bytes
-            var body = Encoding.UTF8.GetBytes(message);
+            var body = Encoding.UTF8.GetBytes(emailMessage);
 
-            // Publicar el mensaje
+            // Publicar el mensaje en la cola
             channel.BasicPublish(
                 exchange: string.Empty,
                 routingKey: queueName,
                 basicProperties: null,
                 body: body);
 
-            Console.WriteLine($"[x] Mensaje enviado: {message}");
+            Console.WriteLine("[x] Correo electrónico enviado a la cola:");
+            Console.WriteLine(emailMessage);
         }
     }
 }
