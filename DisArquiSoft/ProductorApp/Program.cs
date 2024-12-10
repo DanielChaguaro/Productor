@@ -34,13 +34,21 @@ class Program
 
         var exchangeName = "notification_topic_exchange";
         var emailProducer = new EmailNotificationProducer(channel, exchangeName);
+        
+        Console.Write("Type (e.g., 'email', 'sms'): ");
+            var type = Console.ReadLine();
 
+        Console.Write("Recipient (e.g., Notification of Product): ");
+            var recipient = Console.ReadLine();
+
+        Console.Write("Content (e.g., 'Your product has been confirmed!'): ");
+            var content = Console.ReadLine();
         // Crear un mensaje de prueba
         var message = new NotificationMessage
         {
-            Type  = "user@example.com",
-            Recipient = "Order Confirmation",
-            Content = "Your order has been confirmed!"
+            Type  = type,
+            Recipient = recipient,
+            Content = content
         };
 
         // Publicar el mensaje
