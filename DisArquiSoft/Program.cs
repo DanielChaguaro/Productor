@@ -1,4 +1,4 @@
-﻿using RabbitMQ.Client;
+using RabbitMQ.Client;
 
 class Program
 {
@@ -6,9 +6,6 @@ class Program
     {
         var connection = new RabbitMQConnection().GetConnection();
         using var channel = connection.CreateModel();
-
-        var rabbitMQConnection = new RabbitMQConnection();
-
 
         // Initialize managers
         var exchangeManager = new ExchangeManager(channel);
@@ -32,22 +29,7 @@ class Program
         var smsConsumer = new SmsNotificationConsumer(channel);
         smsConsumer.StartConsuming("sms_notification_queue");
 
-        var exchangeName = "notification_topic_exchange";
-        var emailProducer = new EmailNotificationProducer(channel, exchangeName);
-
-        // Crear un mensaje de prueba
-        var message = new NotificationMessage
-        {
-            Type  = "user@example.com",
-            Recipient = "Order Confirmation",
-            Content = "Your order has been confirmed!"
-        };
-
-        // Publicar el mensaje
-        emailProducer.PublishNotification(message);
-
         Console.WriteLine("Consumers started. Press [enter] to exit.");
         Console.ReadLine();
     }
 }
-
